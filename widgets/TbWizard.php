@@ -59,7 +59,13 @@ class TbWizard extends CWidget
 	 * @var array the JS options for the bootstrap wizard plugin
 	 */
 	public $options = array();
-	
+
+    /**
+     * Add progress bar above tab content
+     * @var boolean
+     */
+    public $addProgressBar = false;
+
 	/**
 	 * @var boolean Add tabs navbar to the main tab navigation
 	 */
@@ -125,6 +131,11 @@ class TbWizard extends CWidget
 		$tabs = ob_get_clean();
 
 		ob_start();
+        if ($this->addProgressBar){
+            echo '<div id="wizard-bar" class="progress progress-striped active">';
+	        echo '<div class="bar"></div>';
+            echo '</div>';
+        }
 		echo '<div class="tab-content">';
 		echo implode('', $content);
 		echo $this->pagerContent;
