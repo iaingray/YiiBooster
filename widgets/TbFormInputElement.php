@@ -22,6 +22,7 @@ class TbFormInputElement extends CFormInputElement
 	 */
 	public $wrapBootstrapTags = true;
 
+
 	/**
 	 * Map element->type to TbActiveForm method
 	 * @var array this->type => TbActiveForm::method
@@ -151,7 +152,7 @@ class TbFormInputElement extends CFormInputElement
 			$options['for'] = $this->attributes['id'];
 		}
 
-		return CHtml::activeLabel($this->getParent()->getModel(), $this->name, $options);
+            return CHtml::activeLabel($this->getParent()->getModel(), $this->name, $options);
 	}
 
 }
