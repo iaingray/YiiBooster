@@ -28,11 +28,13 @@ class TbWizard extends CWidget
 	 * @see TbMenu::$type
 	 */
 	public $type = TbMenu::TYPE_TABS;
+
 	/**
 	 * @var string the placement of the tabs.
 	 * Valid values are 'above', 'below', 'left' and 'right'.
 	 */
 	public $placement;
+
 	/**
 	 * @var array the tab configuration.
 	 */
@@ -47,14 +49,17 @@ class TbWizard extends CWidget
 	 * @var boolean whether to encode item labels.
 	 */
 	public $encodeLabel = true;
+
 	/**
 	 * @var string[] the Javascript event handlers.
 	 */
 	public $events = array();
+
 	/**
 	 * @var array the HTML attributes for the widget container.
 	 */
 	public $htmlOptions = array();
+
 	/**
 	 * @var array the JS options for the bootstrap wizard plugin
 	 */
@@ -70,7 +75,7 @@ class TbWizard extends CWidget
 	 * @var boolean Add tabs navbar to the main tab navigation
 	 */
 	public $addTabsNavBar = false;
-	
+
 	/**
 	 * @var string Pager HTML code
 	 */
@@ -78,10 +83,12 @@ class TbWizard extends CWidget
 				<li class="previous first" style="display:none;"><a href="#">First</a></li>
 				<li class="previous"><a href="#">Previous</a></li>
 				<li class="next last" style="display:none;"><a href="#">Last</a></li>
-			  	<li class="next"><a href="#">Next</a></li>
+				<li class="next"><a href="#">Next</a></li>
 			</ul>';
-	
+
 	/**
+	 *### .init()
+	 *
 	 * Initializes the widget.
 	 */
 	public function init()
@@ -107,6 +114,8 @@ class TbWizard extends CWidget
 	}
 
 	/**
+	 *### .run()
+	 *
 	 * Run this widget.
 	 */
 	public function run()
@@ -166,7 +175,10 @@ class TbWizard extends CWidget
 	}
 
 	/**
+	 *### .normalizeTabs()
+	 *
 	 * Normalizes the tab configuration.
+	 *
 	 * @param array $tabs the tab configuration
 	 * @param array $panes a reference to the panes array
 	 * @param integer $i the current index
