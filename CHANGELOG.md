@@ -1,14 +1,54 @@
 # ChangeLog
-## Special Thanks
+Please update this document each time you close an issue by your commit.
+
+## Special Thanks from original author
 I would like to personally thank everyone of you that spend your valuable time helping improving this extension, by pointing out bugs and/or providing solutions that all of us can take advantage with.
 
 Thank you all
 
-Antonio Ramirez
-Senior Web Developer
-[www.clevertech.biz](http://www.clevertech.biz)
+Antonio Ramirez.
 
-### YiiBooster version 1.0.6
+
+## YiiBooster version 1.1.0
+- **(enh)** Added Italian translation for `TbHtml5Editor` #544 (realtebo)
+- **(enh)** Rearranged build script to accommodate Composer installed libraries better. (hijarian)
+- **(enh)** Added composer file #566 (gureedo)
+- **(enh)** Updated version of Boostrap Datepicker library #585 (soee)
+- **(enh)** Following methods are deprecated now in main `Bootstrap` class: `register`, `registerAllCss`, `registerAllScripts`, `registerCoreScripts`, `registerTooltipAndPopover`, `registerCoreCss` and `registerResponsiveCss`. If you have been using them, stop as soon as possible, because most possibly you will end with broken styles in your application. (hijarian)
+- **(fix)** Removed LESS files from the codebase, as they are unused (hijarian)
+- **(fix)** Now the bootstrap CSS files are being included according to the combination of `enableCdn`, `minifyCss`, `responsiveCss` and `fontAwesomeCss` parameters. #528 #510 (hijarian)
+- **(enh)** Added two parameters to Bootstrap component, `ajaxCssLoad` and `ajaxJsLoad`, to control loading CSS and JS assets in AJAX calls #514 (ianare)
+- **(fix)** TbBox action buttons now display correcftly with icons (fleuryc)
+- **(fix)** Check that $_SERVER['HTTP_USER_AGENT'] is set when loading MSIE font awesome (ianare)
+- **(fix)** Breadcrumbs not visible with default css (naduvko)
+- **(enh)** Inline datepicker (naduvko)
+- **(fix)** Localization of datepicker not working (naduvko)
+
+## YiiBooster version 1.0.7
+- **(fix)** HighCharts now accept data with zero values normally #345 (dheering)
+- **(enh)** Added datepicker and date.js to packages.php with enableCdn support (magefad)
+- **(fix)** Fixed incorrect margin in accordion header #484 (hijarian)
+- **(enh)** Upgraded the jQuery UI / Bootstrap compatibility layer to v. 0.5 (hijarian)
+- **(enh)** Fixed the TbBulkAction to accommodate to `selectableRows` #490 (jamesmbowler)
+- **(enh)** Added the readme to contributing to GitHub repo, now it should be more visible for collaborators (hijarian)
+- **(fix)** Update to Bootstrap 2.3.2 - patch release to address a single bug (see bootstrap issue 7118) related to dropdowns and command/control clicking links in Firefox
+- **(enh)** Update bootstrap-datepicker from RC to 1.0.2 final (magefad)
+- **(enh)** Update yiistrap compatibility helpers #443 (magefad)
+- **(fix)** Fixed the multiple option in `TbFileUpload` #457 (mikspark)
+- **(fix)** Removed BOM from all files and converted line endings to Unix `\n` ones #486 #479 (hijarian)
+- **(fix)** Fixed use of negative numbers in TbSumOperation (speixoto)
+- **(enh)** Added the special properties to set `htmlOptions` on tab content and tabs themselves in `TbTabs` #452 (lloyd966, Antonio Ramirez)
+- **(enh)** Added ability to set the id of the dropdown menu #462 (speixoto)
+- **(enh)** Added the possibility to render append/prepend without a span wrap #414 (Frostmaind)
+- **(enh)** Update x-editable-yii from 1.3.0 to 1.4.0 #413 (magefad)
+- **(enh)** Now use Yii clientScript packages functionality with ability to use custom assetsUrl, added option enableCdn (true if YII_DEBUG off, netdna.bootstrapcdn.com CDN used by default) (magefad)
+- **(enh)** Added Helpers: TbHtml, TbIcon for compatibility with yiistrap #443 (magefad)
+- **(cln)** Remove not bootstrap - jquery editable. Use stable **bootstrap** x-editable instead. (magefad)
+- **(cln)** Removed non-working TbJqRangeSlider (magefad)
+- **(fix)** Include specific FontAwesome CSS for IE7 #434 (kev360)
+- **(enh)** Changed structure of the project directory, now the sources are clearly separated from all other build artifacts like the documentation or tests #263 (hijarian)
+
+## YiiBooster version 1.0.6
 - **(fix)** Now it is possible to provide custom 'class' and 'style' htmlOptions for TbProgress #216 (hijarian)
 - **(fix)** Fix typo on TbCollapse (tonydspaniard)
 - **(fix)** Dropdown in collapse not showing on first attempt (hijarian)
@@ -57,7 +97,7 @@ Senior Web Developer
 - **(fix)** Add support for non-link brand in TbNavbar
 
 
-### YiiBooster version 1.0.5
+## YiiBooster version 1.0.5
 
 - **(fix)** TbCarousel displayPrevAndNext set to false breaks the page (amosviedo)
 - **(enh)** Bootstrap upgrade to 2.2.1 (kazuo)
